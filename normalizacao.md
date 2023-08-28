@@ -89,11 +89,15 @@
 
     Quarta Forma Normal (4NF)
         
-        Lida com dependências multivaloradas, onde um atributo não chave pode ter múltiplos valores associados a ele para uma única chave.
+        Lida com dependências multivaloradas
+        
+            * um atributo não chave pode ter múltiplos valores associados a ele para uma única chave.
 
     Quinta Forma Normal (5NF)
     
-        Lida com dependências de junção, que surgem quando informações que poderiam estar em uma única tabela são divididas em várias tabelas.
+        Lida com dependências de junção
+            
+            * surgem quando informações que poderiam estar em uma única tabela são divididas em várias tabelas.
 
     Forma Normal de Domínio/Elementar (DKNF)
         
