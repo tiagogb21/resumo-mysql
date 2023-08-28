@@ -8,31 +8,37 @@
 
     1 - Eliminar Redundância
     
-        Não ter dados repetidos
+            Não ter dados repetidos
 
-        Evitar a duplicação desnecessária de dados em tabelas, economizando espaço de armazenamento e garantindo que as informações sejam atualizadas de forma consistente.
+            Evitar a duplicação desnecessária de dados em tabelas.
+            
+            Objetivo:
+                
+                * economizar no espaço de armazenamento
+                
+                * garantir que as informações sejam atualizadas de forma consistente.
 
     2 - Minimizar Anomalias
     
-        Reduzir a probabilidade de anomalias de dados, como inserções, atualizações ou exclusões incorretas, que podem ocorrer devido à duplicação de informações.
+            Reduzir a probabilidade de anomalias de dados, como inserções, atualizações ou exclusões incorretas, que podem ocorrer devido à duplicação de informações.
 
     3 - Manter a Integridade
     
-        Garantir que os dados sejam precisos, confiáveis e estejam sempre em um estado consistente.
+            Garantir que os dados sejam precisos, confiáveis e estejam sempre em um estado consistente.
 
 
 ## Como fazer?
 
-    * Separar os dados em tabelas diferentes
-
-    Quanto menos redundância menos chance de erro
+    * Separar os dados relacionados em tabelas diferentes.
+    
+    Obs.: Quanto menos redundância houver, menor será a probabilidade de erros nos dados.
 
 
 ## Benefícios
 
-    Separação de dados relacionados em suas próprias tabelas
+    Separação de dados relacionados em suas próprias tabelas (maior organização e clareza)
 
-    Integridade dos dados
+    Integridade dos dados (dados precisos, consistentes e confiáveis.)
 
     Economia de espaço
 
@@ -46,16 +52,36 @@
     As formas normais mais comuns incluem:
 
     Primeira Forma Normal (1NF)
-        
-        Nesta etapa, as tabelas são organizadas para garantir que cada coluna contenha apenas valores atômicos, ou seja, valores indivisíveis. Além disso, cada coluna deve ter um nome exclusivo.
+
+        Colunas devem possuir valores atômicos, um único valor indivisível;
+
+        Valores em uma coluna devem ser do mesmo tipo;
+
+        Cada coluna deve possuir um nome exclusivo;
+
+        A ordem dos dados registrados em uma tabela não deve afetar a integridade dos dados.
 
     Segunda Forma Normal (2NF)
         
-        Na 2NF, as tabelas devem estar na 1NF e, além disso, todos os atributos não chave devem depender completamente da chave primária.
+        As tabelas devem estar na 1NF
+
+        A tabela não deve possuir dependências parciais, ou seja, todos os atributos não chave devem depender completamente da chave primária.
+
+        Devemos fazer a pergunta:
+
+            É possível mover os valores de uma coluna para uma outra tabela exclusiva?
 
     Terceira Forma Normal (3NF)
     
-        Na 3NF, as tabelas devem estar na 2NF e não podem conter dependências transitivas, ou seja, uma coluna não chave não deve depender de outra coluna não chave.
+        As tabelas devem estar na 1NF e na 2NF
+        
+        As tabelas não podem conter dependências transitivas, ou seja, uma coluna não chave não deve depender de outra coluna não chave.
+
+        A tabela não deve conter atributos (colunas) que não sejam dependentes exclusivamente da PK (chave primária).
+
+        Devemos fazer a pergunta:
+
+            O atributo (coluna) é dependente de outra coluna que não seja PK ou que não seja dependente unicamente da PK?
 
     Forma Normal de Boyce-Codd (BCNF)
         
