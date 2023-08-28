@@ -11,6 +11,7 @@
 
 * RIGHT JOIN --> tabela da direita NÃO precisa ter correspondente na esquerda (SOMENTE volta)
 
+
 ## INNER JOIN:
 
     Retorna apenas os registros que têm correspondências em ambas as tabelas envolvidas na junção.
@@ -58,20 +59,20 @@
 # RIGHT JOIN (ou RIGHT OUTER JOIN):
 
     Retorna todos os registros da tabela à direita (a segunda tabela mencionada) e os registros correspondentes da tabela à esquerda (a primeira tabela mencionada).
-    
+        
     Se não houver correspondência na tabela à esquerda, os campos da tabela à esquerda serão preenchidos com valores nulos.
 
-    Retorna todos os resultados independente se ele bateu com algum resultado da esquerda.
+    Retorna todos os resultados independentemente se eles combinam com algum resultado da esquerda.
 
-    Ex.: se quisermos saber quais são todos os fornecedores, independente de um deles ter um produto registrado ou não.
-    
+    Exemplo: se quisermos saber quais são todos os fornecedores, independentemente de algum deles ter um produto registrado ou não.
+        
     Sintaxe:
 
         SELECT colunas
             FROM tabela1
             RIGHT JOIN tabela2 ON tabela1.coluna = tabela2.coluna;
-    
-    Ex.:
+        
+    Exemplo:
 
         SELECT employees.employee_name, departments.department_name
             FROM employees
